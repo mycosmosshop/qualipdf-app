@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QualiPDF — PDF Düzenleyici</title>
+  <script type="module" crossorigin src="./assets/index-BC3vnt-z.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/ocr-ui-BOqHhDLE.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-BPEc_daY.css">
+</head>
+<body>
+  <header id="topbar">
+    <div class="tb-left">
+      <button id="menu-btn" class="menu-btn" title="Menü">Menü</button>
+      <div class="brand"><span class="logo">Q</span>Quali<b>PDF</b></div>
+    </div>
+    <div id="docname" class="tb-center"></div>
+    <div class="tb-right">
+      <button data-cmd="undo" class="icon-btn" title="Geri al (Ctrl+Z)"></button>
+      <button data-cmd="redo" class="icon-btn" title="Yinele (Ctrl+Y)"></button>
+      <button data-cmd="find" class="icon-btn" title="Bul ve değiştir (Ctrl+F / Ctrl+H)"></button>
+      <span class="tb-sep"></span>
+      <button data-cmd="export" class="pill" title="Word, Excel veya PowerPoint olarak kaydet">Dışa aktar</button>
+      <button data-cmd="save" class="pill primary" title="Kaydet (Ctrl+S)">Kaydet</button>
+      <button data-cmd="ai" class="pill ai-btn" title="Yapay zekâ asistanı: özet, soru-cevap, yeniden yazma">Yapay Zekâ Asistanı</button>
+    </div>
+  </header>
+  <main>
+    <aside id="toolpane">
+      <div id="tp-head"></div>
+      <div id="toolbar"></div>
+      <div id="rhp"></div>
+    </aside>
+    <section id="docarea">
+      <div id="viewer">
+        <div id="drop">
+          <div class="drop-inner">
+            <div class="drop-logo">Q</div>
+            <h1>QualiPDF</h1>
+            <p>Düzenlemek, yorum eklemek, dönüştürmek veya korumak için bir PDF açın.</p>
+            <div class="drop-actions">
+              <button data-cmd="open" class="pill primary">PDF seç</button>
+              <button data-cmd="new" class="pill">Boş belge</button>
+            </div>
+            <p class="drop-hint">veya dosyayı buraya sürükleyip bırakın</p>
+          </div>
+        </div>
+        <div id="pages"></div>
+      </div>
+      <div id="quickbar"></div>
+      <div id="pagenav">
+        <button id="pn-prev" class="icon-btn" title="Önceki sayfa"></button>
+        <input id="pn-page" type="text" value="1" aria-label="Sayfa" />
+        <span id="pn-total">/ 1</span>
+        <button id="pn-next" class="icon-btn" title="Sonraki sayfa"></button>
+        <span class="pn-sep"></span>
+        <button data-cmd="zoom-out" class="icon-btn" title="Uzaklaştır (Ctrl −)"></button>
+        <span id="zoom-label">100%</span>
+        <button data-cmd="zoom-in" class="icon-btn" title="Yakınlaştır (Ctrl +)"></button>
+        <button data-cmd="fit" class="icon-btn" title="Genişliğe sığdır"></button>
+      </div>
+    </section>
+    <aside id="sidepanel">
+      <div class="sp-head"><span id="sp-title"></span><button id="sp-close" class="icon-btn" title="Kapat"></button></div>
+      <div id="thumbs"></div>
+      <div id="sp-body"></div>
+    </aside>
+    <nav id="rail">
+      <button data-panel="thumbs" title="Sayfa küçük resimleri"></button>
+      <button data-panel="bookmarks" title="Yer imleri"></button>
+      <button data-panel="comments" title="Yorumlar"></button>
+      <button data-panel="attachments" title="Ekler"></button>
+    </nav>
+  </main>
+  <footer id="status"><span id="status-text">Hazır</span><span id="page-info"></span></footer>
+  <input type="file" id="file-pdf" accept="application/pdf" hidden />
+  <input type="file" id="file-img" accept="image/png,image/jpeg" hidden />
+  <input type="file" id="file-merge" accept="application/pdf" hidden />
+</body>
+</html>

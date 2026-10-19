@@ -1,0 +1,1 @@
+export{t as ocrDialog}from"./ocr-ui-BOqHhDLE.js";
